@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour
 {
     Rigidbody2D rb;
@@ -46,4 +46,15 @@ public class Movement : MonoBehaviour
 
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Death")
+        {
+            SceneManager.LoadScene("Scene", LoadSceneMode.Single);
+        }
+    }
+   
+       
+    
+
 }
