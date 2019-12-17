@@ -9,7 +9,7 @@ public class CoinSpawner : MonoBehaviour
     [SerializeField]
     GameObject coin;
 
-    int textNum = 1;
+    static int textNum = 1;
     float timer = 0;
     Rigidbody2D rb;
 
