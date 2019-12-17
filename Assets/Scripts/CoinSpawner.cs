@@ -33,12 +33,6 @@ public class CoinSpawner : MonoBehaviour
         {
             rb.velocity = new Vector3(-3, 0, 0);
         }
-
-        if (gameObject.name == "Text")
-        {
-            gameObject.transform.position = new Vector3(0, 0, 0);
-            myText.color = Color.white;
-        }
     }
 
     void Update()
@@ -54,6 +48,8 @@ public class CoinSpawner : MonoBehaviour
     {
         Destroy(gameObject);
 
+        myText.color = Color.black;
+        myText.gameObject.transform.position = new Vector3(0, 0, 0);
         myText.text = textNum.ToString();
         textNum++;
     }
