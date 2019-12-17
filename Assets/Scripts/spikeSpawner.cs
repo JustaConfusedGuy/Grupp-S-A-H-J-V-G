@@ -19,7 +19,7 @@ public class spikeSpawner : MonoBehaviour
         elapsedTime += Time.deltaTime;
         if(elapsedTime > respawnTimer)
         {
-            Vector2 position = new Vector2(Random.Range(5, 50), Random.Range(9, 8));
+            Vector2 position = new Vector2(Random.Range(5, 50), Random.Range(3.34f, 3.34f));
             Instantiate(Spike, position, Quaternion.identity);
             elapsedTime = 0;
         }
