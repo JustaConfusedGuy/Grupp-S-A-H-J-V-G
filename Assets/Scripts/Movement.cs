@@ -50,17 +50,17 @@ public class Movement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-<<<<<<< HEAD
+ 
         if (collision.transform.tag == "Death")
         {
             SceneManager.LoadScene("Scene", LoadSceneMode.Single);
         }
-    }
+    
    
        
     
 
-=======
+
         if(collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
@@ -68,5 +68,5 @@ public class Movement : MonoBehaviour
         }
         
     }
->>>>>>> 9fc6b689e25159e4c93b9b4d5523a7550ccf66b6
+
 }
