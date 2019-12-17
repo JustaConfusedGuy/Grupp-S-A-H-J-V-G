@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 380208669}
   m_Layer: 0
   m_Name: T Tak
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 1456190065}
   m_Layer: 0
   m_Name: T Golv
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
