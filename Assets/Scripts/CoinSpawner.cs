@@ -9,7 +9,7 @@ public class CoinSpawner : MonoBehaviour
     [SerializeField]
     GameObject coin;
 
-    int textNum = 1;
+    static int textNum = 1;
     float timer = 0;
     Rigidbody2D rb;
 
@@ -48,6 +48,7 @@ public class CoinSpawner : MonoBehaviour
     {
         Destroy(gameObject);
 
-        myText.text = textNum++.ToString();
+        myText.text = textNum.ToString();
+        textNum++;
     }
 }
