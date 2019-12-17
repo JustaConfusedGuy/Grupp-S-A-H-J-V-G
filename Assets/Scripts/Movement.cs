@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     Rigidbody2D rb;
     public float gs;
     bool spacePressed = false;
+    bool isGrounded = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,24 +18,25 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             spacePressed = !spacePressed;
-            
-            
+
+            isGrounded = false;
             print("neg");
             
         }
 
         if (spacePressed)
         {
-            rb.gravityScale = gs;
+                rb.gravityScale = gs;
         }
         else
         {
-            rb.gravityScale = -gs;
-        }
 
+                rb.gravityScale = -gs;
+        }
+        
         /*
         if (Input.GetKeyDown(KeyCode.Space) && spacePressed == true)
         {
@@ -48,6 +50,7 @@ public class Movement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+<<<<<<< HEAD
         if (collision.transform.tag == "Death")
         {
             SceneManager.LoadScene("Scene", LoadSceneMode.Single);
@@ -57,4 +60,13 @@ public class Movement : MonoBehaviour
        
     
 
+=======
+        if(collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+            print("collision");
+        }
+        
+    }
+>>>>>>> 9fc6b689e25159e4c93b9b4d5523a7550ccf66b6
 }

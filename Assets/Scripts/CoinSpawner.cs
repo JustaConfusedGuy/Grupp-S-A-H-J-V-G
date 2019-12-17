@@ -38,7 +38,7 @@ public class CoinSpawner : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 5 && gameObject.name == "Text")
+        if (timer >= 2 && gameObject.name == "Text")
         {
             Instantiate(coin, new Vector3(15, 0, 0), Quaternion.identity);
             timer = 0;
@@ -48,6 +48,8 @@ public class CoinSpawner : MonoBehaviour
     {
         Destroy(gameObject);
 
+        myText.color = Color.white;
+        myText.gameObject.GetComponent<RectTransform>().localPosition = new Vector3(-346, 136, 0);
         myText.text = textNum.ToString();
         textNum++;
     }

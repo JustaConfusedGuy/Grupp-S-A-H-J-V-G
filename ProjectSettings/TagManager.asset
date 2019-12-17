@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Death
+=======
+  - Ground
+>>>>>>> 9fc6b689e25159e4c93b9b4d5523a7550ccf66b6
   layers:
   - Default
   - TransparentFX
