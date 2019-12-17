@@ -48,6 +48,7 @@ public class CoinSpawner : MonoBehaviour
     {
         Destroy(gameObject);
 
-        myText.text = textNum++.ToString();
+        myText.text = textNum.ToString();
+        textNum++;
     }
 }
