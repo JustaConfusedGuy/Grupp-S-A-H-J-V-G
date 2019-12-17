@@ -33,6 +33,11 @@ public class CoinSpawner : MonoBehaviour
         {
             rb.velocity = new Vector3(-3, 0, 0);
         }
+
+        if (gameObject.name == "Text")
+        {
+            gameObject.transform.position = new Vector3(0, 0, 0);
+        }
     }
 
     void Update()
