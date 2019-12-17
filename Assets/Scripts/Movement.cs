@@ -37,20 +37,14 @@ public class Movement : MonoBehaviour
                 rb.gravityScale = -gs;
         }
         
-        /*
-        if (Input.GetKeyDown(KeyCode.Space) && spacePressed == true)
-        {
-            spacePressed = false;
-            rb.gravityScale = 1;
-            
-            print("Pos");
-        }*/
-
+ 
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
  
+
+
         if (collision.transform.tag == "Death")
         {
             SceneManager.LoadScene("Scene", LoadSceneMode.Single);
@@ -62,11 +56,23 @@ public class Movement : MonoBehaviour
 
 
         if(collision.gameObject.tag == "Ground")
+
+
+        if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
             print("collision");
+
+
         }
-        
+
+
     }
 
 }
+        
+        
+
+
+    
+
