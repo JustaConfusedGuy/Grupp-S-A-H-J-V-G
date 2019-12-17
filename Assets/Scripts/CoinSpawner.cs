@@ -53,6 +53,7 @@ public class CoinSpawner : MonoBehaviour
     {
         Destroy(gameObject);
 
+        myText.color = Color.white;
         myText.text = textNum.ToString();
         textNum++;
     }
